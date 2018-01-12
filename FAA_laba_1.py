@@ -20,3 +20,8 @@ reg = "[\w.][\w.]+@\w+\.\w+"
 emails = re.findall(reg, t)                   # метод findall() возвращает список совпавших подстрок
 
 print(set(emails))                            # вывод множества совпавших подстрок
+
+em = open("текст_2.txt", "w", encoding='utf-8')  # запись адресов в текстовый файл
+e = '\n'
+em.write(e.join(emails))
+em.close()
